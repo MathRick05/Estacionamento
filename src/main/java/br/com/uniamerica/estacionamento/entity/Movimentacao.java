@@ -27,8 +27,11 @@ public class Movimentacao extends AbstractEntity{
     @Column(name = "saida")
     private LocalDateTime saida;
     @Getter@Setter
-    @Column(name = "tempo")
-    private LocalTime tempo;
+    @Column(name = "tempo_horas")
+    private Integer tempoHoras;
+    @Getter@Setter
+    @Column(name = "tempo_minutos")
+    private Integer tempoMinutos;
     @Getter@Setter
     @Column(name = "tempo_desconto")
     private LocalTime tempoDesconto;
@@ -45,7 +48,7 @@ public class Movimentacao extends AbstractEntity{
     @Column(name = "valor_total")
     private BigDecimal valorTotal;
     @Getter@Setter
-    @Column(name = "valor_hota")
+    @Column(name = "valor_hora")
     private BigDecimal valorHora;
     @Getter@Setter
     @Column(name = "valor_hora_multa")

@@ -71,7 +71,7 @@ public class MovimentacaoController {
         try {
             final Movimentacao movimentacaoBanco = this.movimentacaoRepository.findById(id).orElse(null);
 
-            this.movimentacaoService.delete(movimentacaoBanco);
+            this.movimentacaoService.delete(id);
             return ResponseEntity.ok("Movimentação desativada");
         } catch (Exception erro) {
             return ResponseEntity.badRequest().body(erro.getMessage());
